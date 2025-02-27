@@ -25,7 +25,7 @@ const SideBar = ({
 
   return (
     <Sider
-      className="  text-[#737791] overflow-auto h-[100vh] z-50 fixed left-0 top-20 sm:top-0 bottom-0  rounded-tr-3xl rounded-br-3xl  "
+      className="  text-[#737791] overflow-auto overflow-x-hidden h-[100vh] z-50 fixed left-0 top-20 sm:top-0 bottom-0  rounded-tr-3xl rounded-br-3xl  "
       collapsible
       collapsed={collapsed}
       trigger={null}

@@ -1,9 +1,84 @@
-import React from 'react'
+import React from "react";
+import SearchBar from "../Components/UI/SearchBar";
+import { IoMdAdd } from "react-icons/io";
+import Table from "../Components/UI/Table";
+import { FiEdit } from "react-icons/fi";
+import { RiDeleteBin5Fill } from "react-icons/ri";
+import { BsThreeDotsVertical } from "react-icons/bs";
+
+const services = [
+  {
+    id: 1,
+    name: "John Doe",
+    price: "user09@gmail.com",
+    status: "DEACTIVATED",
+  },
+  {
+    id: 2,
+    name: "matthew",
+    price: "user09@gmail.com",
+    status: "DEACTIVATED",
+  },
+  {
+    id: 3,
+    name: "John Doe",
+    price: "user09@gmail.com",
+    status: "ACTIVED",
+  },
+  {
+    id: 4,
+    name: "John Doe",
+    price: "user09@gmail.com",
+    status: "DEACTIVATED",
+  },
+];
+
+const columns = [
+  { header: "Name", key: "name" },
+  { header: "Price", key: "price" },
+  { header: "Status", key: "status" },
+];
+
+const actions = [
+  {
+    label: <FiEdit size={20} className="text-[#008ed0]" />,
+    className: "",
+    onClick: (row) => console.log("Edit:", row),
+  },
+  {
+    label: <RiDeleteBin5Fill size={20} className="text-[#008ed0]" />,
+    className: "",
+    onClick: (row) => console.log("Delete:", row),
+  },
+  {
+    label: <BsThreeDotsVertical size={20} className="text-gray-400" />,
+    className: "text-gray-100",
+    onClick: (row) => console.log("more:", row),
+  },
+];
 
 const ServicesManagement = () => {
   return (
-    <div>ServicesManagement</div>
-  )
-}
+    <div>
+      <SearchBar placeholder="Services Management" />
+      <div className="bg-primary text-white p-3 rounded-lg flex items-center justify-end gap-2 ml-auto mt-3 w-fit px-5 cursor-pointer">
+        <IoMdAdd size={23} />
+        <button className="font-semibold text-base cursor-pointer">
+          Add Service
+        </button>
+      </div>
+      <div className="mt-5">
+        <Table
+          title="All Services"
+          data={services}
+          columns={columns}
+          itemsPerPage={10}
+          actions={actions}
+          noDataMessage="No users available."
+        />
+      </div>
+    </div>
+  );
+};
 
-export default ServicesManagement
+export default ServicesManagement;
