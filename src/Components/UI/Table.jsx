@@ -20,10 +20,10 @@ const Table = ({
   return (
     <div className="p-5 bg-white shadow-xl rounded-lg">
       <h1 className=" text-xl font-semibold">{title}</h1>
-      <div className="overflow-x-auto bg-white rounded-lg mt-8">
+      <div className="overflow-x-auto bg-white rounded-b-lg mt-8">
         <table className="text-left w-full">
           <thead>
-            <tr className="border-b border-[#DFE0EB] text-[#9FA2B4] font-inter text-sm leading-4">
+            <tr className="border-b border-[#DFE0EB] text-[#9FA2B4] font-inter text-sm leading-4 bg-[#F3F6F9] ">
               {columns.map((column, index) => (
                 <th key={index} className="py-2 px-3">
                   {column.header}
