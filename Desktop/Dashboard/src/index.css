@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0a5f59;
+  --color-secondary: #252b42;
+  --color-third: #fdcf6f;
+  --font-display: "Muslish", sans-serif;
+}
+
+:root {
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 0;
+  transition: all 0.3s;
+}
+
+.pagination-link {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.pagination-link:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.pagination-active {
+  background-color: var(--color-primary);
+  color: white;
+}
