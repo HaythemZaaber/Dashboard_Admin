@@ -1,4 +1,3 @@
-import React from "react";
 import SearchBar from "../Components/UI/SearchBar";
 import { IoMdAdd } from "react-icons/io";
 import Table from "../Components/UI/Table";
@@ -11,25 +10,25 @@ const services = [
     id: 1,
     name: "John Doe",
     price: "user09@gmail.com",
-    status: "DEACTIVATED",
+    status: "DESACTIVATED",
   },
   {
     id: 2,
     name: "matthew",
     price: "user09@gmail.com",
-    status: "DEACTIVATED",
+    status: "DESACTIVATED",
   },
   {
     id: 3,
     name: "John Doe",
     price: "user09@gmail.com",
-    status: "ACTIVED",
+    status: "ACTIVATED",
   },
   {
     id: 4,
     name: "John Doe",
     price: "user09@gmail.com",
-    status: "DEACTIVATED",
+    status: "DESACTIVATED",
   },
 ];
 

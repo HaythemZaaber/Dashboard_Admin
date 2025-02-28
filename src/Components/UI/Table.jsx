@@ -39,14 +39,14 @@ const Table = ({
               currentData.map((row, rowIndex) => (
                 <tr
                   key={rowIndex}
-                  className="border-b border-[#DFE0EB] hover:bg-gray-50 text-black font-display text-xs lg:text-sm font-normal"
+                  className="border-b border-[#DFE0EB] hover:bg-gray-50 text-black  text-xs lg:text-sm"
                 >
                   {columns.map((column, colIndex) => (
                     <td key={colIndex} className="py-3 px-3 text-gray-700">
                       <span
                         className={` ${
                           column.key === "status"
-                            ? "px-4 py-2 rounded-xl font-semibold"
+                            ? "px-4 py-1 rounded-xl font-semibold"
                             : ""
                         } ${
                           column.key === "status"
@@ -56,7 +56,7 @@ const Table = ({
                               ? "text-green-600 bg-green-500/15  "
                               : row[column.key] === "Error"
                               ? "text-red-500 bg-red-500/15  "
-                              : row[column.key] === "DEACTIVATED"
+                              : row[column.key] === "DESACTIVATED"
                               ? "text-red-500 bg-red-500/15  "
                               : "text-green-600 bg-green-500/15  "
                             : ""
