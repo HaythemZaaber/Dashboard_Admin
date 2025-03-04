@@ -41,3 +41,7 @@ a {
   background-color: var(--color-primary);
   color: white;
 }
+
+.sidebar {
+  clip-path: inset(0px 0px 0px 0px);
+}

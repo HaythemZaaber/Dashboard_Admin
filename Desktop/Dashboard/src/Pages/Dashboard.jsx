@@ -5,6 +5,7 @@ import { Outlet } from "react-router-dom";
 import SideBar from "../Components/Dashboard/SideBar";
 import { useMediaQuery } from "react-responsive";
 import { ADMINSIDEBARITEMS } from "../lib/SidebarLinks";
+import Navbar from "../Components/Dashboard/Navbar";
 
 const Dashboard = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -15,26 +16,30 @@ const Dashboard = () => {
   // Collapse logic based on screen size
   useEffect(() => {
     if (isSmallScreen) {
-      setCollapsed(true); // Fully collapse on small screens
+      setCollapsed(true);
     } else if (isMediumScreen) {
-      setCollapsed(true); // Show icons only on medium screens
+      setCollapsed(true);
     } else {
-      setCollapsed(false); // Full sidebar on larger screens
+      setCollapsed(false);
     }
   }, [isMediumScreen, isSmallScreen]);
 
   return (
     <div>
       <Layout hasSider>
-        <div className="fixed">
-          <SideBar
-            collapsed={collapsed}
-            setCollapsed={setCollapsed}
-            isMediumScreen={isMediumScreen}
-            isSmallScreen={isSmallScreen}
-            sidebarItems={ADMINSIDEBARITEMS}
-          />
-        </div>
+        {isSmallScreen ? (
+          <Navbar sidebarItems={ADMINSIDEBARITEMS} />
+        ) : (
+          <div className="fixed">
+            <SideBar
+              collapsed={collapsed}
+              setCollapsed={setCollapsed}
+              isMediumScreen={isMediumScreen}
+              isSmallScreen={isSmallScreen}
+              sidebarItems={ADMINSIDEBARITEMS}
+            />
+          </div>
+        )}
 
         <Layout
           style={{
@@ -44,8 +49,8 @@ const Dashboard = () => {
           className={`  ${
             collapsed
               ? isSmallScreen
-                ? "ml-0"
-                : "sm:ml-[60px]"
+                ? "ml-0 pt-18"
+                : "sm:pl-[60px]"
               : "sm:pl-[300px]"
           } transition-all`}
         >
@@ -55,13 +60,7 @@ const Dashboard = () => {
               minHeight: "100vh",
             }}
           >
-            <div
-              style={{
-                padding: 20,
-                // minHeight: calc(100vh - 5rem),
-              }}
-              className="min-h-full"
-            >
+            <div className="min-h-full p-5">
               <Outlet />
             </div>
           </Content>

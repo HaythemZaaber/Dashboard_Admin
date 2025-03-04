@@ -4,6 +4,7 @@ import { MdOutlinePayment } from "react-icons/md";
 import { RiQuestionnaireLine } from "react-icons/ri";
 import { RiSettings3Fill } from "react-icons/ri";
 import { TbStarsFilled } from "react-icons/tb";
+import { GrServices } from "react-icons/gr";
 
 export const ADMINSIDEBARITEMS = [
   {
@@ -34,7 +35,7 @@ export const ADMINSIDEBARITEMS = [
     key: "ServicesManagement",
     text: "Services Management",
     link: "servicesManagement",
-    Icon: RiSettings3Fill,
+    Icon: GrServices,
   },
   {
     key: "Reviews",

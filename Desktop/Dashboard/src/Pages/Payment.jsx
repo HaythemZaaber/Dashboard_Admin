@@ -60,7 +60,7 @@ const actions = [
 const Payment = () => {
   return (
     <div>
-      <SearchBar placeholder="Payment Management" />
+      <SearchBar placeholder="Payment Management" search={true} />
 
       <div className="mt-5">
         {/* <AllUsers currentData={users} /> */}

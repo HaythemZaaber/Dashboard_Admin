@@ -1,5 +1,4 @@
 import React from "react";
-import { Progress, Rate } from "antd";
 import FeedbackItem from "./FeedbackItem";
 
 const feedback = [

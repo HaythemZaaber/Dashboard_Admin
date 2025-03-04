@@ -53,7 +53,7 @@ const actions = [
 const ProfilesManagement = () => {
   return (
     <div>
-      <SearchBar placeholder="Profiles Management" />
+      <SearchBar placeholder="Profiles Management" search={true} />
       <div className="bg-primary text-white p-3 rounded-lg flex items-center justify-end gap-2 ml-auto mt-3 w-fit px-5 cursor-pointer">
         <IoMdAdd size={23} />
         <button className="font-semibold text-base cursor-pointer">
